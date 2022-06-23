@@ -7,9 +7,10 @@ edition = "2018"
 
 [dependencies]
 
-
+# `cargo build` 실행 시 이용되는 빌드 설정
 [profile.dev]
-panic = "abort"
+panic = "abort" # 패닉 시 스택 되감기를 하지 않고 바로 프로그램 종료
 
+# `cargo build --release` 실행 시 이용되는 빌드 설정
 [profile.release]
-panic = "abort"
+panic = "abort" # 패닉 시 스택 되감기를 하지 않고 바로 프로그램 종료
