@@ -3,6 +3,8 @@
 
 use core::panic::PanicInfo;
 
+mod vga_buffer;
+
 // 패닉 발생 시 해당 함수 호출
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
