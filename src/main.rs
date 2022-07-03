@@ -8,6 +8,7 @@ mod vga_buffer;
 // 패닉 발생 시 해당 함수 호출
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
+    println!("{}", _info);
     loop {}
 }
 
@@ -17,6 +18,7 @@ pub extern "C" fn _start() -> ! {
     // 링커는 기본적으로 '_start' 라는 이름을 가진 함수를 실행 시작 지점으로 삼기에,
     // 이 함수는 실행 시작 지점이 됩니다
     println!("Hello World{}", "!");
+    panic!("Some panic message");
 
     loop {}
 }
